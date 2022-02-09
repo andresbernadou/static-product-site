@@ -45,6 +45,7 @@ copy.querySelector (".subTitle").textContent = `${product.articletype} - ${produ
 copy.querySelector ("h3").textContent = product.productdisplayname;
 copy.querySelector (".smallProduct img").src= `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`
 copy.querySelector (".showDiscount").textContent = "- %" + product.discount;
+copy.querySelector(".price").textContent = "Price: Dkk " + product.price;
 //showDiscount
 
 if(product.soldout){
@@ -57,7 +58,7 @@ if(product.discount){
 }
 let finalPrice =  product.price - product.price * product.discount / 100 ;
 // * (1-(product.discount / 100)
-copy.querySelector(".discounted p").textContent = "Dkk " + Math.ceil(finalPrice) ;
+copy.querySelector(".discounted p").textContent = " Dkk " + Math.ceil(finalPrice) ;
 //grab parent
 const parent = document.querySelector("main"); 
 
